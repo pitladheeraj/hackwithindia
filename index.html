@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalankari Kitchen's | Authentic Restaurant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: grid; }
+  </style>
+</head>
+<body class="bg-[#1a1a1a] text-white">
+  <!-- Navbar -->
+  <header class="bg-black text-white fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Kalankari Kitchen & Bar </h1>
+      <nav class="space-x-4 hidden md:block">
+        <a href="#home" class="hover:text-yellow-400">Home</a>
+        <a href="#menu" class="hover:text-yellow-400">Menu</a>
+        <a href="#gallery" class="hover:text-yellow-400">Gallery</a>
+        <a href="#reserve" class="hover:text-yellow-400">Reserve</a>
+        <a href="#contact" class="hover:text-yellow-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen bg-cover bg-center text-white flex items-center justify-center relative" style="background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80');">
+    <div class="bg-black bg-opacity-60 p-10 rounded-lg text-center">
+      <h2 class="text-4xl font-bold mb-4">Welcome to Kalankari Kitchen's</h2>
+      <p class="mb-6">Authentic Telangana and Indian Cuisine</p>
+      <a href="#reserve" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded">Reserve a Table</a>
+    </div>
+  </section>
+
+ <!-- Menu Section -->
+<section id="menu" class="py-20 bg-[#1a1a1a] text-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-yellow-400 text-center mb-12">Our Exquisite Menu</h2>
+
+    <!-- Tab Buttons -->
+    <div class="flex justify-center space-x-4 mb-10">
+      <button onclick="showMenu('nonveg')" class="bg-yellow-500 text-black px-4 py-2 rounded">Non-Veg</button>
+      <button onclick="showMenu('veg')" class="bg-yellow-500 text-black px-4 py-2 rounded">Veg</button>
+      <button onclick="showMenu('bar')" class="bg-yellow-500 text-black px-4 py-2 rounded">Bar</button>
+    </div>
+
+    <!-- Non-Veg Section -->
+    <div id="nonveg" class="menu-tab grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <img src="https://masalaandchai.com/wp-content/uploads/2022/03/Butter-Chicken.jpg" class="w-full h-40 object-cover rounded mb-2" />
+        <h4 class="font-bold text-lg">Butter Chicken</h4>
+        <p class="text-gray-300">Creamy tomato gravy with grilled chicken.</p>
+        <p class="text-yellow-400 mt-2">₹280</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani.jpg" class="w-full h-40 object-cover rounded mb-2" />
+        <h4 class="font-bold text-lg">Chicken Briyani</h4>
+        <p class="text-gray-300">Sepcial with Kashmiri spices.</p>
+        <p class="text-yellow-400 mt-2">₹340</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <img src="https://www.relishthebite.com/wp-content/uploads/2015/03/Lamb_Pepper-roast-3.jpg" class="w-full h-40 object-cover rounded mb-2" />
+        <h4 class="font-bold text-lg">Mutton Roast</h4>
+        <p class="text-gray-300">Charred, spiced grilled lamb.</p>
+        <p class="text-yellow-400 mt-2">₹260</p>
+      </div>
+    </div>
+
+    <!-- Veg Section -->
+    <div id="veg" class="menu-tab hidden grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <img src="https://www.whiskaffair.com/wp-content/uploads/2014/07/Palak-Paneer-2-1.jpg" class="w-full h-40 object-cover rounded mb-2" />
+        <h4 class="font-bold text-lg">Palak Paneer</h4>
+        <p class="text-gray-300">Cottage cheese in creamy spinach gravy.</p>
+        <p class="text-yellow-400 mt-2">₹200</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <img src="https://i.pinimg.com/736x/80/3f/f0/803ff029867e021b7b4193f58e1c4ad1.jpg" class="w-full h-40 object-cover rounded mb-2" />
+        <h4 class="font-bold text-lg">Chole Bhature</h4>
+        <p class="text-gray-300">Spiced chickpeas with fluffy bhature.</p>
+        <p class="text-yellow-400 mt-2">₹180</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <img src="https://kannanskitchen.com/wp-content/uploads/2021/04/DSC_1079_1.jpg" class="w-full h-40 object-cover rounded mb-2" />
+        <h4 class="font-bold text-lg">Veg Dum Biryani</h4>
+        <p class="text-gray-300">Aromatic basmati rice with spiced vegetables.</p>
+        <p class="text-yellow-400 mt-2">₹220</p>
+      </div>
+    </div>
+
+    <!-- Bar Section -->
+    <div id="bar" class="menu-tab hidden grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <img src="https://specials-images.forbesimg.com/imageserve/5e9ef0708c2caa0006e70258/whiskey-drink/960x0.jpg?fit=scale" class="w-full h-40 object-cover rounded mb-2" />
+        <h4 class="font-bold text-lg">Old Fashioned</h4>
+        <p class="text-gray-300">Classic whisky with bitters and orange zest.</p>
+        <p class="text-yellow-400 mt-2">₹320</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <img src="https://themadtable.com/wp-content/uploads/2021/03/67C4F76D-72F5-4084-8D39-961C57EF9F55_1_105_c.jpeg" class="w-full h-40 object-cover rounded mb-2" />
+        <h4 class="font-bold text-lg">Mango Mojito</h4>
+        <p class="text-gray-300">Minty mango drink, no alcohol.</p>
+        <p class="text-yellow-400 mt-2">₹150</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow">
+        <img src="https://cdn.credihealth.com/production/system/images/assets/79504/original/13-surprising-benefits-of-beers-3672.webp?1729078486" class="w-full h-40 object-cover rounded mb-2" />
+        <h4 class="font-bold text-lg">Kingfisher Beer</h4>
+        <p class="text-gray-300">India’s favorite chilled lager.</p>
+        <p class="text-yellow-400 mt-2">₹180</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Menu Toggle -->
+<script>
+  function showMenu(section) {
+    document.querySelectorAll('.menu-tab').forEach(tab => {
+      tab.classList.add('hidden');
+    });
+    document.getElementById(section).classList.remove('hidden');
+  }
+</script>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-yellow-50">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold text-yellow-900 mb-12">Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- Chef-->
+      <img src="https://aaftonline.com/blog/wp-content/uploads/2024/11/Executive-Chef-The-Pathway-from-Culinary-Student-to-Master-Chef-870x600.jpg"
+           alt="chef"
+           class="rounded-2xl shadow-lg" />
+
+      <!-- food  -->
+      <img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2022/02/food_ingredients_flatlay.jpg"
+           alt="Food"
+           class="rounded-2xl shadow-lg" />
+
+      <!-- food 2-->
+      <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1650010555/blog/rhrafdqrjy075qtjlwnk.webp"
+           alt="Food2"
+           class="rounded-2xl shadow-lg" />
+
+      <!-- Indoor Ambience -->
+      <img src="https://assets.architecturaldigest.in/photos/63733ec2a2dd6ea6560eb6da/16:9/w_1920,c_limit/Ditas%20Interior%20Image%20-%201%20(8).png"
+           alt="Indoor Ambience"
+           class="rounded-2xl shadow-lg" />
+
+      <!-- Outdoor Ambience -->
+      <img src="https://www.designpataki.com/wp-content/uploads/2024/05/3-New-Restaurants-in-Hyderabad-An-Exploration-of-Telugu-Cuisine-An-Ode-to-Natural-Architecture-And-A-Bohemian-Oasis-Design-Pataki-feature-image.jpg"
+           alt="Outdoor Seating"
+           class="rounded-2xl shadow-lg" />
+
+      <!-- Bar / Lounge -->
+      <img src="https://assets.architecturaldigest.in/photos/6008232906a309310701607c/master/w_1600,c_limit/dining-wine-rack-phoenix-mills-mumbai-restaurant-review-sarah-todd-chef4.jpg"
+           alt="Bar Ambience"
+           class="rounded-2xl shadow-lg" />
+
+    </div>
+  </div>
+</section>
+
+  <!-- Reservation Section -->
+  <section id="reserve" class="py-20 bg-black">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-6">Reserve a Table</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full p-3 rounded bg-gray-800 text-white" required />
+        <input type="email" placeholder="Email" class="w-full p-3 rounded bg-gray-800 text-white" required />
+        <input type="date" class="w-full p-3 rounded bg-gray-800 text-white" required />
+        <input type="time" class="w-full p-3 rounded bg-gray-800 text-white" required />
+        <input type="number" placeholder="Number of Guests" class="w-full p-3 rounded bg-gray-800 text-white" required />
+        <textarea placeholder="Special Request (Optional)" class="w-full p-3 rounded bg-gray-800 text-white"></textarea>
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded" type="submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-[#1a1a1a] text-center">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-4">Contact Us</h2>
+    <p class="mb-2">Kalankari Kitchen's, Near Madhapur, Hyderabad</p>
+    <p class="mb-2">Phone: +91 98765 43210</p>
+    <p>Email: contact@kalankarikitchens.in</p>
+  </section>
+
+  <!-- JS Tab Logic -->
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
